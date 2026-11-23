@@ -152,7 +152,7 @@ export const RulesPage: React.FC = () => {
                   <input
                     type="number"
                     value={rule.params?.rateThreshold ?? 100}
-                    onChange={(e) => handleParamChange(rule.id, 'rateThreshold', Number(e.target.value))}
+                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleParamChange(rule.id, 'rateThreshold', Number(e.target.value))}
                     className="w-full px-3 py-1.5 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-slate-100"
                   />
                 </div>
@@ -166,7 +166,7 @@ export const RulesPage: React.FC = () => {
                       <input
                         type="number"
                         value={rule.params?.minPacketSizeKB ?? 1}
-                        onChange={(e) => handleParamChange(rule.id, 'minPacketSizeKB', Number(e.target.value))}
+                        onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleParamChange(rule.id, 'minPacketSizeKB', Number(e.target.value))}
                         className="w-full px-3 py-1.5 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800"
                       />
                     </div>
@@ -175,7 +175,7 @@ export const RulesPage: React.FC = () => {
                       <input
                         type="number"
                         value={rule.params?.maxPacketSizeKB ?? 4096}
-                        onChange={(e) => handleParamChange(rule.id, 'maxPacketSizeKB', Number(e.target.value))}
+                        onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleParamChange(rule.id, 'maxPacketSizeKB', Number(e.target.value))}
                         className="w-full px-3 py-1.5 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800"
                       />
                     </div>
@@ -185,7 +185,7 @@ export const RulesPage: React.FC = () => {
                     <input
                       type="text"
                       value={(rule.params?.attackPorts ?? []).join(', ')}
-                      onChange={(e) => {
+                      onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
                         const ports = e.target.value.split(',').map(s => Number(s.trim())).filter(n => !isNaN(n));
                         handleParamChange(rule.id, 'attackPorts', ports);
                       }}
@@ -205,7 +205,7 @@ export const RulesPage: React.FC = () => {
                     min="1"
                     max="100"
                     value={rule.params?.threatScoreThreshold ?? 70}
-                    onChange={(e) => handleParamChange(rule.id, 'threatScoreThreshold', Number(e.target.value))}
+                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleParamChange(rule.id, 'threatScoreThreshold', Number(e.target.value))}
                     className="w-full px-3 py-1.5 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-slate-100"
                   />
                 </div>
@@ -221,7 +221,7 @@ export const RulesPage: React.FC = () => {
                     min="1"
                     max="5"
                     value={rule.params?.minIndicators ?? 3}
-                    onChange={(e) => handleParamChange(rule.id, 'minIndicators', Number(e.target.value))}
+                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleParamChange(rule.id, 'minIndicators', Number(e.target.value))}
                     className="w-full px-3 py-1.5 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-slate-100"
                   />
                 </div>
@@ -249,7 +249,7 @@ export const RulesPage: React.FC = () => {
               type="number"
               step="0.1"
               value={zScoreThreshold}
-              onChange={(e) => setZScoreThreshold(Number(e.target.value))}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) => setZScoreThreshold(Number(e.target.value))}
               className="w-full px-3 py-2 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-slate-100"
             />
           </div>
@@ -261,7 +261,7 @@ export const RulesPage: React.FC = () => {
             <input
               type="number"
               value={windowSize}
-              onChange={(e) => setWindowSize(Number(e.target.value))}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) => setWindowSize(Number(e.target.value))}
               className="w-full px-3 py-2 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-slate-100"
             />
           </div>
