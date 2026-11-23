@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply transition-colors duration-200;
+  }
+}
+
+/* Custom glow and futuristic cyber effects */
+.glow-cyan {
+  box-shadow: 0 0 20px -3px rgba(34, 211, 238, 0.45);
+}
+
+.glow-red {
+  box-shadow: 0 0 25px -2px rgba(239, 68, 68, 0.55);
+}
+
+.glow-green {
+  box-shadow: 0 0 25px -2px rgba(34, 197, 94, 0.55);
+}
+
+.pipeline-grid-bg {
+  background-size: 24px 24px;
+  background-image: radial-gradient(rgba(14, 165, 233, 0.08) 1px, transparent 1px);
+}
+
+.dark .pipeline-grid-bg {
+  background-size: 24px 24px;
+  background-image: radial-gradient(rgba(34, 211, 238, 0.12) 1px, transparent 1px);
+}
