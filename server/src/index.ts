@@ -307,8 +307,13 @@ app.post('/api/selftest', async (req: Request, res: Response) => {
 });
 
 // Serve static frontend files if built
-const clientDistPath = path.resolve(process.cwd(), '../client/dist');
-if (fs.existsSync(clientDistPath)) {
+const candidatePaths = [
+  path.resolve(process.cwd(), '../client/dist'),
+  path.resolve(process.cwd(), 'client/dist'),
+  path.resolve(process.cwd(), 'dist')
+];
+const clientDistPath = candidatePaths.find(p => fs.existsSync(p));
+if (clientDistPath) {
   app.use(express.static(clientDistPath));
   app.get('*', (req: Request, res: Response, next) => {
     if (req.path.startsWith('/api')) return next();
