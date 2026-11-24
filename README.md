@@ -134,12 +134,3 @@ Open your browser at: **`http://localhost:3001`**
 2. View the real-time **Confusion Matrix (TP, TN, FP, FN)**, Accuracy (%), Precision (%), Recall (%), F1-Score (%), Donut distribution, and Accuracy Trend line over continuous streams.
 
 ---
-
-## 7. Project Metadata
-- **Guided by:** Dr. I. Sudha (Professor/CSE), Dr. R. Sarasu (Associate Professor/CSE)
-- **Presented by:**
-  - K. Guzhalinitha [192425232]
-  - R. Srividya [192472261]
-  - Prithika B H [192424403]
-  - Allaparthi Bhavana [192472141]
-  - K.S.N. Vinay Dutt [192472191]
